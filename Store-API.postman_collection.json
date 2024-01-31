@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "3b6d7b88-513c-418d-868b-cb753d66aa61",
+		"name": "Store-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31969805"
+	},
+	"item": [
+		{
+			"name": "Get All Products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/products?numericFilters=price>=100",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "featured",
+							"value": "false",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "company",
+							"value": "liddy",
+							"disabled": true
+						},
+						{
+							"key": "sort",
+							"value": "name",
+							"disabled": true
+						},
+						{
+							"key": "fields",
+							"value": "name,price",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "numericFilters",
+							"value": "price>=100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products - Testing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/products/static",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"products",
+						"static"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
